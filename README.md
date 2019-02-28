@@ -6,12 +6,13 @@ Command es un patrón de diseño que permite convertir una petición en un objet
 
 En lugar de tener 3 implementaciones desde una GUI pasamos a tener solo una
 
-https://refactoring.guru/images/patterns/diagrams/command/solution1-en.png
+![alt text](https://refactoring.guru/images/patterns/diagrams/command/solution1-en.png)
 
-https://refactoring.guru/images/patterns/diagrams/command/solution2-en.png
+![alt text](https://refactoring.guru/images/patterns/diagrams/command/solution2-en.png)
 
 
-Con tal de que 
+
+Con tal de que tengamos diferentes acciones conectadas a una sola interface la cual sea capaz de ejecutar los métodos que realicen las diferentes acciones
 
 ![alt text](https://refactoring.guru/images/patterns/diagrams/command/solution3.png)
 
