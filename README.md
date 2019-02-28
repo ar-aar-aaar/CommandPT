@@ -8,7 +8,7 @@ Se hace una interface así:
 
 
 ### Interface ICommand
-    public class ICommand {
+    public interface ICommand {
         public boolean Command(Dinero cantidad);
     }
 
