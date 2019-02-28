@@ -2,49 +2,23 @@
 # By Aaron Zepeda
 
 
-Command es un patrón de diseño que permite convertir una petición en un objeto que contiene toda la información de la petición.
+Command es un patrón de diseño que permite convertir una petición en un objeto que contiene toda la información de la petición. Esta información nos permite parametrizar métodos con diferentes peticiones, retrasar o poner en una pila la ejecución de una petición, y soportar la anulación de operaciones
 
-Se hace una interface así:
+En lugar de tener 3 implementaciones desde una GUI pasamos a tener solo una
 
+https://refactoring.guru/images/patterns/diagrams/command/solution1-en.png
 
-### Interface ICommand
-    public interface ICommand {
-        public boolean Command(Dinero cantidad);
-    }
-
-Dicha interfaz será implementada por clases que ejecuten acciones diferentes dentro de nuestro sistema
-
-### Implementaciones de interface ICommand
-    public class Action1 implements ICommand{
-        public boolean Command(Action action){
-
-        }
-
-    }
-
-    public class Action2 implements ICommand{
-        public boolean Command (Action action){
-
-        }
-    }
-
-Debemos tener una clase que actue como una pila de las acciones ICommand
+https://refactoring.guru/images/patterns/diagrams/command/solution2-en.png
 
 
-### Clase CommandHistory
-    public class CommandHistory{
-        private Stack<ICommand> history = new Stack();
+Con tal de que 
 
-        public void push(ICommand c) {
-            history.push(c);
-        }
+![alt text](https://refactoring.guru/images/patterns/diagrams/command/solution3.png)
 
-        public ICommand pop() {
-            return history.pop();
-        }
 
-        public boolean isEmpty() { return history.isEmpty(); }
-    }
+
+
+
 
 Para la implementacion al ejecutar comandos se deben pushear dentro de la pila, para el momento en que se deshaga la accion se popeen y se haga la debida implementacion para deshacer la accion.
 
