@@ -15,8 +15,8 @@ Se hace una interface así:
 Dicha interfaz será implementada por clases que ejecuten acciones diferentes dentro de nuestro sistema
 
 ### Hijos de interface ICommand
-    public class Action1 extends ICommand{
-        public boolean Command(Accion action){
+    public class Action1 implements ICommand{
+        public boolean Command(Action action){
 
         }
 
