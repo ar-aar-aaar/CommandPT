@@ -48,5 +48,5 @@ Debemos tener una clase que actue como una pila de las acciones ICommand
 
 Para la implementacion al ejecutar comandos se deben pushear dentro de la pila, para el momento en que se deshaga la accion se popeen y se haga la debida implementacion para deshacer la accion.
 
-![alt text](https://refactoring.guru/images/patterns/diagrams/command/example.png)
+![alt text](https://refactoring.guru/images/patterns/diagrams/command/structure.png)
 
